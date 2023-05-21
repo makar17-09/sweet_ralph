@@ -3,9 +3,10 @@ c=0
 a=0
 x_eda=400
 y_eda=410
-timer=random(10*50,30*50)
+timer=random(15*15,10*15)
+
 def setup():
-    size(1000, 550)
+    size(1000, 760)
     global b
     b = loadImage("ra.jpg")
 
@@ -34,7 +35,7 @@ def draw():
         y_eda=410
     
     timer-=1
-    if timer==0:
+    if timer<=0:
       a=loadImage("unnamed.png")
-      image(a,0,0)
+      image(a,80,0,850,850)
       noLoop()
